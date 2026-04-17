@@ -1,0 +1,138 @@
+[32m INFO[0m 
+
+ ================ EVM Fuzzer Start ===================
+
+
+[32m INFO[0m Deploying contract: build/Reentrancy_bonus*
+[32m INFO[0m Contract build/Reentrancy_bonus* deployed to: 0x887db5715868498cff494b5dcc8eda6ce5b7652a -> balacne is 0
+[32m INFO[0m Deployed all contracts
+
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 0, objectives: 0, executions: 0, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? true 
+ Txn:
+[Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024
+   └─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.getFirstWithdrawalBonus(0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb)
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 3, objectives: 0, executions: 1, exec/sec: 0.000
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 3, objectives: 0, executions: 1, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? true 
+ Txn:
+[Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024
+   └─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.getFirstWithdrawalBonus{value: 894.4388 ether}(0xe1A425f1AC34A8a441566f93c82dD730639c8510)
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 4, objectives: 0, executions: 5, exec/sec: 0.000
+[32m INFO[0m ============= Coverage Summary =============
+[32m INFO[0m build/Reentrancy_bonus(0x887db5715868498cff494b5dcc8eda6ce5b7652a): 83.28% Instruction Covered, 71.43% Branch Covered
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 4, objectives: 0, executions: 5, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? false 
+ Txn:
+[Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawReward(0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024)
+   │  └─[2] [Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb.fallback()
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 5, objectives: 0, executions: 33, exec/sec: 0.000
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 5, objectives: 0, executions: 33, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? true 
+ Txn:
+[Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb
+   └─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawReward{value: 0.3602 ether}(0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb)
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 6, objectives: 0, executions: 34, exec/sec: 0.000
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 6, objectives: 0, executions: 34, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? false 
+ Txn:
+[Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb
+   └─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawReward(0x0000000000000000000000000000000000000000)
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 7, objectives: 0, executions: 36, exec/sec: 0.000
+[32m INFO[0m ============= Coverage Summary =============
+[32m INFO[0m build/Reentrancy_bonus(0x887db5715868498cff494b5dcc8eda6ce5b7652a): 84.30% Instruction Covered, 78.57% Branch Covered
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 7, objectives: 0, executions: 36, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? true 
+ Txn:
+[Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb
+   └─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawReward(0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a)
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 8, objectives: 0, executions: 129, exec/sec: 0.000
+[32m INFO[0m ============= Coverage Summary =============
+[32m INFO[0m build/Reentrancy_bonus(0x887db5715868498cff494b5dcc8eda6ce5b7652a): 85.32% Instruction Covered, 85.71% Branch Covered
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 8, objectives: 0, executions: 129, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? false 
+ Txn:
+[Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawReward(0xe1A425f1AC34A8a441566f93c82dD730639c8510)
+   │  ├─[2] [Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb.fallback()
+   │  │  ├─[3] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawReward(0x0000000000000000000000000000000000000000)
+   │  │  ├─[3] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawReward(0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb)
+   │  │  │  ├─[4] [Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb.fallback()
+   │  │  │  │  ├─[5] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawReward(0x8EF508Aca04B32Ff3ba5003177cb18BfA6Cd79dd)
+   │  │  │  │  │  ├─[6] [Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb.fallback()
+   │  │  │  │  │  │  └─[7] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.call{value: 4722.3664 ether}(0x00000000)
+   │  │  │  [Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024
+   │  │  │  │  ├─[5] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.getFirstWithdrawalBonus(0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb)
+   │  │  │  │  │  ├─[6] [Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024.fallback()
+   │  │  │  │  │  │  └─[7] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.call(0x00000000)
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 9, objectives: 0, executions: 1262, exec/sec: 0.000
+[32m INFO[0m ============= Coverage Summary =============
+[32m INFO[0m build/Reentrancy_bonus(0x887db5715868498cff494b5dcc8eda6ce5b7652a): 98.98% Instruction Covered, 85.71% Branch Covered
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 9, objectives: 0, executions: 1262, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? true 
+ Txn:
+[Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawReward(0xe1A425f1AC34A8a441566f93c82dD730639c8510)
+   │  ├─[2] [Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb.fallback()
+   │  │  ├─[3] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawReward(0x0000000000000000000000000000000000000000)
+   │  │  ├─[3] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawReward(0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb)
+   │  │  │  ├─[4] [Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb.fallback()
+   │  │  │  │  ├─[5] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawReward(0x8EF508Aca04B32Ff3ba5003177cb18BfA6Cd79dd)
+   │  │  │  │  │  ├─[6] [Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb.fallback()
+   │  │  │  │  │  │  └─[7] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.call{value: 4722.3664 ether}(0x00000000)
+   │  │  │  [Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024
+   │  │  │  │  ├─[5] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.getFirstWithdrawalBonus(0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb)
+   │  │  │  │  │  ├─[6] [Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024.fallback()
+   │  │  │  │  │  │  └─[7] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.call(0x00000000)
+   │  │  │  │  ├─[5] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.getFirstWithdrawalBonus(0x0000000000000000000000000000000000000000)
+   │  │  │  │  └─[5] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.getFirstWithdrawalBonus(0x0000000000000000000000000000000000000000)
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 10, objectives: 0, executions: 1618, exec/sec: 0.000
+[32m INFO[0m ============= Coverage Summary =============
+[32m INFO[0m build/Reentrancy_bonus(0x887db5715868498cff494b5dcc8eda6ce5b7652a): 100.00% Instruction Covered, 92.86% Branch Covered
+
+
+
+😊😊 Found vulnerabilities! 
+
+
+================ Description ================
+[Reentrancy]: Reentrancy on "build/Reentrancy_bonus(0x887db5715868498cff494b5dcc8eda6ce5b7652a)" at slot 105346677394657812523509302648090814223178346195104812945680421250858325621136
+================ Trace ================
+   │  │  │  [Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb
+   │  │  │  │  ├─[5] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawReward(0x8EF508Aca04B32Ff3ba5003177cb18BfA6Cd79dd)
+   │  │  │  │  │  ├─[6] [Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb.fallback()
+   │  │  │  │  │  │  └─[7] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.call{value: 4722.3664 ether}(0x00000000)
+   │  │  │  [Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024
+   │  │  │  │  ├─[5] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.getFirstWithdrawalBonus(0xe1A425f1AC34A8a441566f93c82dD730639c8510)
+   │  │  │  │  │  ├─[6] [Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024.fallback()
+   │  │  │  │  │  │  ├─[7] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.getFirstWithdrawalBonus(0xe1A425f1AC34A8a441566f93c82dD730639c8510)
+   │  │  │  │  │  │  │  └─[8] [Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024.fallback()
+   │  │  │  │  └─[5] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.call(0x00000000)
+   │  │  └─[3] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.call(0x00000000)
+
+

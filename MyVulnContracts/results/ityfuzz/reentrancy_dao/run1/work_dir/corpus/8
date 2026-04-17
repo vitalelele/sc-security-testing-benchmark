@@ -1,0 +1,8 @@
+Reverted? false 
+ Txn:
+[Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.deposit{value: 8741306}()
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.deposit{value: 4722.3664 ether}()
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawAll()
+   │  ├─[2] [Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024.fallback()
+   │  │  └─[3] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.call(0x00000000)

@@ -1,0 +1,10 @@
+TOOL=smartian
+CATEGORY=control
+CONTRACT=ReentrancyGuard
+RUN=5
+FOUND=0
+TTD_sec=ND
+TIMEBOX_sec=600
+BugArtifacts=0
+TTD_LINE=ND
+Notes=control-set; no-findings; expected

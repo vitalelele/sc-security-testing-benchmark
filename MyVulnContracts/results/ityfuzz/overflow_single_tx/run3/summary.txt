@@ -1,0 +1,9 @@
+TOOL=ityfuzz
+CATEGORY=arithmetic
+CONTRACT=overflow_single_tx
+RUN=3
+FOUND=0
+TTD_sec=ND
+TIMEBOX_sec=600
+BugArtifacts=0
+Notes=snapshot-based; detectors=all; found-oracle=found_vuln_banner; timebox_or_no_bug

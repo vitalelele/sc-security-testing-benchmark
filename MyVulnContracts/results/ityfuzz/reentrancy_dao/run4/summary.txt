@@ -1,0 +1,9 @@
+TOOL=ityfuzz
+CATEGORY=reentrancy
+CONTRACT=reentrancy_dao
+RUN=4
+FOUND=1
+TTD_sec=0
+TIMEBOX_sec=600
+BugArtifacts=0
+Notes=snapshot-based; detectors=all; objectives-oracle

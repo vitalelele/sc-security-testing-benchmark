@@ -1,0 +1,116 @@
+[32m INFO[0m 
+
+ ================ EVM Fuzzer Start ===================
+
+
+[32m INFO[0m Deploying contract: build/ReentrancyDAO*
+[32m INFO[0m Contract build/ReentrancyDAO* deployed to: 0x887db5715868498cff494b5dcc8eda6ce5b7652a -> balacne is 0
+[32m INFO[0m Deployed all contracts
+
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 0, objectives: 0, executions: 0, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? false 
+ Txn:
+[Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024
+   └─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawAll()
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 3, objectives: 0, executions: 1, exec/sec: 0.000
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 3, objectives: 0, executions: 1, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? true 
+ Txn:
+[Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024
+   └─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawAll{value: 4722.3664 ether}()
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 4, objectives: 0, executions: 5, exec/sec: 0.000
+[32m INFO[0m ============= Coverage Summary =============
+[32m INFO[0m build/ReentrancyDAO(0x887db5715868498cff494b5dcc8eda6ce5b7652a): 62.43% Instruction Covered, 58.33% Branch Covered
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 4, objectives: 0, executions: 5, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? false 
+ Txn:
+[Sender] 0x8EF508Aca04B32Ff3ba5003177cb18BfA6Cd79dd
+   └─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.deposit()
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 5, objectives: 0, executions: 33, exec/sec: 0.000
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 5, objectives: 0, executions: 33, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? false 
+ Txn:
+[Sender] 0x8EF508Aca04B32Ff3ba5003177cb18BfA6Cd79dd
+   └─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.deposit{value: 4}()
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 6, objectives: 0, executions: 37, exec/sec: 0.000
+[32m INFO[0m ============= Coverage Summary =============
+[32m INFO[0m build/ReentrancyDAO(0x887db5715868498cff494b5dcc8eda6ce5b7652a): 62.43% Instruction Covered, 58.33% Branch Covered
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 6, objectives: 0, executions: 37, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? false 
+ Txn:
+[Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024
+   └─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.deposit{value: 8741306}()
+[Sender] 0x8EF508Aca04B32Ff3ba5003177cb18BfA6Cd79dd
+   └─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.deposit{value: 2225.4660 ether}()
+[Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawAll()
+   │  └─[2] [Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024.fallback()
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 7, objectives: 0, executions: 76, exec/sec: 0.000
+[32m INFO[0m ============= Coverage Summary =============
+[32m INFO[0m build/ReentrancyDAO(0x887db5715868498cff494b5dcc8eda6ce5b7652a): 78.84% Instruction Covered, 66.67% Branch Covered
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 7, objectives: 0, executions: 76, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? false 
+ Txn:
+[Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.deposit{value: 8741306}()
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.deposit{value: 4722.3664 ether}()
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawAll()
+   │  ├─[2] [Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024.fallback()
+   │  │  └─[3] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.call(0x00000000)
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 8, objectives: 0, executions: 155, exec/sec: 0.000
+[32m INFO[0m ============= Coverage Summary =============
+[32m INFO[0m build/ReentrancyDAO(0x887db5715868498cff494b5dcc8eda6ce5b7652a): 96.83% Instruction Covered, 75.00% Branch Covered
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 8, objectives: 0, executions: 155, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? true 
+ Txn:
+[Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.deposit{value: 8741306}()
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawAll()
+   │  ├─[2] [Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024.fallback()
+   │  │  └─[3] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawAll()
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 9, objectives: 0, executions: 446, exec/sec: 0.000
+[32m INFO[0m ============= Coverage Summary =============
+[32m INFO[0m build/ReentrancyDAO(0x887db5715868498cff494b5dcc8eda6ce5b7652a): 98.41% Instruction Covered, 83.33% Branch Covered
+
+
+
+😊😊 Found vulnerabilities! 
+
+
+================ Description ================
+[Reentrancy]: Reentrancy on "build/ReentrancyDAO(0x887db5715868498cff494b5dcc8eda6ce5b7652a)" at slot 20960289742369090431604542254582638918703720108864491590175372994847189243065
+================ Trace ================
+[Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024
+   └─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.deposit{value: 8741306}()
+[Sender] 0x8EF508Aca04B32Ff3ba5003177cb18BfA6Cd79dd
+   └─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.deposit{value: 2225.4660 ether}()
+[Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawAll()
+   │  ├─[2] [Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024.fallback()
+   │  │  ├─[3] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawAll()
+   │  │  │  ├─[4] [Sender] 0x68Dd4F5AC792eAaa5e36f4f4e0474E0625dc9024.fallback()
+   │  │  │  │  └─[5] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.call{value: 3839.6734 ether}(0x00000000)
+   │  │  └─[3] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.call(0x00000000)
+
+

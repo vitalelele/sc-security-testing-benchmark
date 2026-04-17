@@ -1,0 +1,64 @@
+[00:00:00:00] Fuzz target : arithmetic_errors/Overflow.bin
+[00:00:00:00] Fuzzing starts at 02:59:40
+[00:00:00:00] Time limit : 600 s
+[*] EVM Code Copy Analysis started.
+[*] EVM Trampoline Analysis started.
+[*] All done in 0.044890 sec.
+[DEBUG] Analyzing constructor @ 0
+Found sstore(<0x0, { }, { }>, <0x0, { }, { }>) @ 0x8
+Found codecopy(<0x0, { }, { }>, _, _), arg# = 0
+constructor: Def = { var_0 }, Use = {  }
+Constructor tainted: {  }
+[DEBUG] Analyzing add(1003e2d2) @ 44
+Found sload(<0x0, { }, { }>) @ 0x8f
+Found sstore(<0x0, { }, { }>, <T, { }, { var_0 }>) @ 0x96
+add(1003e2d2): Def = { var_0 }, Use = { var_0 }
+(1 candidate sequences)
+["add(1003e2d2)"; "add(1003e2d2)"]
+[00:00:00:00] Start main fuzzing phase
+[00:00:00:00] [*] Save new seed id-00000_00000: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: add(1003e2d2), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: add(1003e2d2), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:00] Tx#2 found IntegerBug at 90
+[00:00:00:00] [*] Save bug seed id-00000-IB_00000: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: add(1003e2d2), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+(    TX 2    ) Function: add(1003e2d2), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000F60000000000000000000000000000
+(    TX 3    ) Function: add(1003e2d2), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 3FFFFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+(    TX 4    ) Function: add(1003e2d2), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 000000000000000000003F000000000000000000000000000000000000000000
+(    TX 5    ) Function: add(1003e2d2), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 000000000000000000000000CD00000000050800000000000000000000000000
+

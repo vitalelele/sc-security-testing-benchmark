@@ -1,0 +1,8 @@
+tool=Mythril
+docker_image=mythril/myth:latest
+category=arithmetic_errors
+contract_rel=arithmetic_errors/integer_overflow_mul.sol
+contract_name=integer_overflow_mul
+run=2
+timebox_sec=600
+date=2026-01-22T18:37:20+01:00

@@ -1,0 +1,4 @@
+Contract: build/Unprotected(0x887db5715868498cff494b5dcc8eda6ce5b7652a)
+Instruction Coverage: 77/80 (96.25%) 
+Branch Coverage: 4/6 (66.67%) 
+--------------------------------

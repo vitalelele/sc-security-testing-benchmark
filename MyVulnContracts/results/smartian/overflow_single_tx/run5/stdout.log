@@ -1,0 +1,244 @@
+[00:00:00:00] Fuzz target : arithmetic_errors/IntegerOverflowSingleTransaction.bin
+[00:00:00:00] Fuzzing starts at 03:11:08
+[00:00:00:00] Time limit : 600 s
+[*] EVM Code Copy Analysis started.
+[*] EVM Trampoline Analysis started.
+[*] All done in 0.064794 sec.
+[DEBUG] Analyzing constructor @ 0
+Found sstore(<0x0, { }, { }>, <0x1, { }, { }>) @ 0x9
+Found codecopy(<0x0, { }, { }>, _, _), arg# = 0
+constructor: Def = { var_0 }, Use = {  }
+Constructor tainted: {  }
+[DEBUG] Analyzing overflowlocalonly(0642f32a) @ 88
+Found sload(<0x0, { }, { }>) @ 0x1c7
+overflowlocalonly(0642f32a): Def = {  }, Use = { var_0 }
+[DEBUG] Analyzing count(06661abd) @ b5
+Found sload(<0x0, { }, { }>) @ 0x1d1
+count(06661abd): Def = {  }, Use = { var_0 }
+[DEBUG] Analyzing underflowtostate(4c4f50f3) @ e0
+Found sload(<0x0, { }, { }>) @ 0x1db
+Found sstore(<0x0, { }, { }>, <T, { }, { var_0 }>) @ 0x1e2
+underflowtostate(4c4f50f3): Def = { var_0 }, Use = { var_0 }
+[DEBUG] Analyzing overflowmultostate(5c68bc06) @ 10d
+Found sload(<0x0, { }, { }>) @ 0x1ed
+Found sstore(<0x0, { }, { }>, <T, { }, { var_0 }>) @ 0x1f4
+overflowmultostate(5c68bc06): Def = { var_0 }, Use = { var_0 }
+[DEBUG] Analyzing underflowlocalonly(69fb0f5d) @ 13a
+Found sload(<0x0, { }, { }>) @ 0x1fe
+underflowlocalonly(69fb0f5d): Def = {  }, Use = { var_0 }
+[DEBUG] Analyzing overflowaddtostate(def92d68) @ 167
+Found sload(<0x0, { }, { }>) @ 0x20c
+Found sstore(<0x0, { }, { }>, <T, { }, { var_0 }>) @ 0x213
+overflowaddtostate(def92d68): Def = { var_0 }, Use = { var_0 }
+[DEBUG] Analyzing overflowmulocalonly(e6dca5ea) @ 194
+Found sload(<0x0, { }, { }>) @ 0x21d
+overflowmulocalonly(e6dca5ea): Def = {  }, Use = { var_0 }
+Pruning out ["overflowaddtostate(def92d68)"]
+Pruning out ["overflowmultostate(5c68bc06)"]
+(19 candidate sequences)
+["underflowtostate(4c4f50f3)"; "underflowtostate(4c4f50f3)"]
+["underflowtostate(4c4f50f3)"; "underflowlocalonly(69fb0f5d)"]
+["underflowtostate(4c4f50f3)"; "overflowmultostate(5c68bc06)"]
+["underflowtostate(4c4f50f3)"; "overflowmulocalonly(e6dca5ea)"]
+["underflowtostate(4c4f50f3)"; "overflowlocalonly(0642f32a)"]
+["underflowtostate(4c4f50f3)"; "overflowaddtostate(def92d68)";
+ "underflowtostate(4c4f50f3)"]
+["underflowtostate(4c4f50f3)"; "overflowaddtostate(def92d68)";
+ "underflowlocalonly(69fb0f5d)"]
+["underflowtostate(4c4f50f3)"; "overflowaddtostate(def92d68)";
+ "overflowmultostate(5c68bc06)"; "underflowtostate(4c4f50f3)"]
+["underflowtostate(4c4f50f3)"; "overflowaddtostate(def92d68)";
+ "overflowmultostate(5c68bc06)"; "underflowlocalonly(69fb0f5d)"]
+["underflowtostate(4c4f50f3)"; "overflowaddtostate(def92d68)";
+ "overflowmultostate(5c68bc06)"; "overflowmultostate(5c68bc06)"]
+["underflowtostate(4c4f50f3)"; "overflowaddtostate(def92d68)";
+ "overflowmultostate(5c68bc06)"; "overflowmulocalonly(e6dca5ea)"]
+["underflowtostate(4c4f50f3)"; "overflowaddtostate(def92d68)";
+ "overflowmultostate(5c68bc06)"; "overflowlocalonly(0642f32a)"]
+["underflowtostate(4c4f50f3)"; "overflowaddtostate(def92d68)";
+ "overflowmultostate(5c68bc06)"; "overflowaddtostate(def92d68)"]
+["underflowtostate(4c4f50f3)"; "overflowaddtostate(def92d68)";
+ "overflowmultostate(5c68bc06)"; "count(06661abd)"]
+["underflowtostate(4c4f50f3)"; "overflowaddtostate(def92d68)";
+ "overflowmulocalonly(e6dca5ea)"]
+["underflowtostate(4c4f50f3)"; "overflowaddtostate(def92d68)";
+ "overflowlocalonly(0642f32a)"]
+["underflowtostate(4c4f50f3)"; "overflowaddtostate(def92d68)";
+ "overflowaddtostate(def92d68)"]
+["underflowtostate(4c4f50f3)"; "overflowaddtostate(def92d68)"; "count(06661abd)"]
+["underflowtostate(4c4f50f3)"; "count(06661abd)"]
+[00:00:00:00] Start main fuzzing phase
+[00:00:00:00] [*] Save new seed id-00000_00000: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: underflowtostate(4c4f50f3), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: underflowtostate(4c4f50f3), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:00] [*] Save new seed id-00001_00000: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: underflowtostate(4c4f50f3), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: underflowlocalonly(69fb0f5d), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:00] [*] Save new seed id-00002_00000: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: underflowtostate(4c4f50f3), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: overflowmultostate(5c68bc06), From: NormalUser3, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:00] [*] Save new seed id-00003_00000: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: underflowtostate(4c4f50f3), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: overflowmulocalonly(e6dca5ea), From: NormalUser3, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:00] [*] Save new seed id-00004_00000: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: underflowtostate(4c4f50f3), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: overflowlocalonly(0642f32a), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:00] [*] Save new seed id-00005_00000: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: underflowtostate(4c4f50f3), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: overflowaddtostate(def92d68), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: underflowtostate(4c4f50f3), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:00] Tx#2 found IntegerBug at 1dc
+[00:00:00:00] [*] Save bug seed id-00000-IB_00000: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: overflowmultostate(5c68bc06), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 2 <= ) Function: underflowtostate(4c4f50f3), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 8000000000000000000000000000000000000000000000000000000000000001
+(    TX 3    ) Function: underflowtostate(4c4f50f3), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 4000000000000000000000000000000000000000000000000000000000000001
+
+[00:00:00:00] [*] Save new seed id-00006_00000: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: underflowlocalonly(69fb0f5d), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000100000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: count(06661abd), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:00] Tx#3 found IntegerBug at 20d
+[00:00:00:00] [*] Save bug seed id-00001-IB_00000: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 1 <= ) Function: underflowlocalonly(69fb0f5d), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000001
+(    TX 2    ) Function: underflowtostate(4c4f50f3), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 000000000000000000000200000000000000000000003F000000000000000080
+(    TX 3    ) Function: overflowaddtostate(def92d68), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 00000000F5000000000000E60000000000000000BA0000000000000000000000
+
+[00:00:00:00] Tx#3 found IntegerBug at 1ee
+[00:00:00:00] [*] Save bug seed id-00002-IB_00000: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: underflowtostate(4c4f50f3), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+(    TX 2    ) Function: count(06661abd), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: overflowmultostate(5c68bc06), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000035000000000000000000000000000000000000000000000000000000
+(    TX 4    ) Function: overflowlocalonly(0642f32a), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 8000000000000000000000000000000000000000000000000000000000000000
+

@@ -1,0 +1,8 @@
+tool=Mythril
+category=reentrancy
+contract=reentrancy/reentrancy_simple.sol
+contract_name=reentrancy_simple
+run=1
+timebox_sec=600
+docker_image=mythril/myth:latest
+date=2026-01-22T17:55:11+01:00

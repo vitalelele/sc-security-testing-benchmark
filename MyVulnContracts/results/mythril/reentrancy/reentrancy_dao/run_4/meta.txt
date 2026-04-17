@@ -1,0 +1,8 @@
+tool=Mythril
+docker_image=mythril/myth:latest
+category=reentrancy
+contract_rel=reentrancy/reentrancy_dao.sol
+contract_name=reentrancy_dao
+run=4
+timebox_sec=600
+date=2026-01-22T18:24:17+01:00

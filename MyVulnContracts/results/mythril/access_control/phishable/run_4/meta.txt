@@ -1,0 +1,8 @@
+tool=Mythril
+docker_image=mythril/myth:latest
+category=access_control
+contract_rel=access_control/phishable.sol
+contract_name=phishable
+run=4
+timebox_sec=600
+date=2026-01-22T18:48:24+01:00

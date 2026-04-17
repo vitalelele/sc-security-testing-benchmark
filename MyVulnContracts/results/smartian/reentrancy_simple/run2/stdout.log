@@ -1,0 +1,101 @@
+[00:00:00:00] Fuzz target : reentrancy/Reentrance.bin
+[00:00:00:00] Fuzzing starts at 01:34:21
+[00:00:00:00] Time limit : 600 s
+[*] EVM Code Copy Analysis started.
+[*] EVM Trampoline Analysis started.
+[*] All done in 0.055531 sec.
+[DEBUG] Analyzing constructor @ 0
+Found codecopy(<0x0, { }, { }>, _, _), arg# = 0
+constructor: Def = {  }, Use = {  }
+Constructor tainted: {  }
+[DEBUG] Analyzing withdrawBalance(5fd8c710) @ 5c
+Found sload(<T, { Sha(*, 0x0) }, { }>) @ 0x12a
+Found sstore(<T, { Sha(*, 0x0) }, { }>, <0x0, { }, { }>) @ 0x18c
+withdrawBalance(5fd8c710): Def = { map_0 }, Use = { map_0 }
+[DEBUG] Analyzing addToBalance(c0e317fb) @ 73
+Found sload(<T, { Sha(*, 0x0) }, { }>) @ 0x1d3
+Found sstore(<T, { Sha(*, 0x0) }, { }>, <T, { }, { map_0 }>) @ 0x1da
+addToBalance(c0e317fb): Def = { map_0 }, Use = { map_0 }
+[DEBUG] Analyzing getBalance(f8b2cb4f) @ 7d
+Found sload(<T, { Sha(*, 0x0) }, { }>) @ 0x21e
+getBalance(f8b2cb4f): Def = {  }, Use = { map_0 }
+Pruning out ["addToBalance(c0e317fb)"]
+(5 candidate sequences)
+["withdrawBalance(5fd8c710)"; "withdrawBalance(5fd8c710)"]
+["withdrawBalance(5fd8c710)"; "getBalance(f8b2cb4f)"]
+["withdrawBalance(5fd8c710)"; "addToBalance(c0e317fb)";
+ "withdrawBalance(5fd8c710)"]
+["withdrawBalance(5fd8c710)"; "addToBalance(c0e317fb)"; "getBalance(f8b2cb4f)"]
+["withdrawBalance(5fd8c710)"; "addToBalance(c0e317fb)"; "addToBalance(c0e317fb)"]
+[00:00:00:00] Start main fuzzing phase
+[00:00:00:00] [*] Save new seed id-00000_00000: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: withdrawBalance(5fd8c710), From: NormalUser3, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: withdrawBalance(5fd8c710), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:00] [*] Save new seed id-00001_00000: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: withdrawBalance(5fd8c710), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: getBalance(f8b2cb4f), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000000000000000000000000000000000
+
+[00:00:00:00] [*] Save new seed id-00002_00000: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: withdrawBalance(5fd8c710), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: addToBalance(c0e317fb), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: withdrawBalance(5fd8c710), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00003_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: addToBalance(c0e317fb), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000002000000000000000000
+(    TX 2    ) Function: withdrawBalance(5fd8c710), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: addToBalance(c0e317fb), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 00000000000000000000F7000000FF0000001800000000000000000000000001
+(    TX 4    ) Function: addToBalance(c0e317fb), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:04] Tx#3 found EtherLeak at 13a
+[00:00:00:04] Tx#3 found Reentrancy at 18c
+[00:00:00:04] [*] Save bug seed id-00000-EL-RE_00004: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: addToBalance(c0e317fb), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000001
+( => TX 2 <= ) Function: addToBalance(c0e317fb), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 000000000000000000000000000000000000000000000000003F000000000000
+(    TX 3    ) Function: withdrawBalance(5fd8c710), From: NormalUser3, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+

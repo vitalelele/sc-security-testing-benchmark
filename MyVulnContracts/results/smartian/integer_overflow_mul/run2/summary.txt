@@ -1,0 +1,2 @@
+FOUND=1
+TTD_LINE=[00:00:00:00] [*] Save bug seed id-00000-IB_00000: 

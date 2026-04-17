@@ -1,0 +1,9 @@
+TOOL=ityfuzz
+CATEGORY=access_control
+CONTRACT=incorrect_constructor_name1
+RUN=1
+FOUND=1
+TTD_sec=1
+TIMEBOX_sec=600
+BugArtifacts=0
+Notes=snapshot-based; detectors=all; found-oracle=found_vuln_banner

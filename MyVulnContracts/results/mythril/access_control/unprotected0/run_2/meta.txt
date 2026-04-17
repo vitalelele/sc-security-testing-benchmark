@@ -1,0 +1,8 @@
+tool=Mythril
+docker_image=mythril/myth:latest
+category=access_control
+contract_rel=access_control/unprotected0.sol
+contract_name=unprotected0
+run=2
+timebox_sec=600
+date=2026-01-22T18:49:18+01:00

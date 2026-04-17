@@ -1,0 +1,110 @@
+[32m INFO[0m 
+
+ ================ EVM Fuzzer Start ===================
+
+
+[32m INFO[0m Deploying contract: build/Reentrance*
+[32m INFO[0m Contract build/Reentrance* deployed to: 0x887db5715868498cff494b5dcc8eda6ce5b7652a -> balacne is 0
+[32m INFO[0m Deployed all contracts
+
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 0, objectives: 0, executions: 0, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? false 
+ Txn:
+[Sender] 0xe1A425f1AC34A8a441566f93c82dD730639c8510
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawBalance()
+   │  └─[2] [Sender] 0xe1A425f1AC34A8a441566f93c82dD730639c8510.fallback()
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 3, objectives: 0, executions: 1, exec/sec: 0.000
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 3, objectives: 0, executions: 1, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? false 
+ Txn:
+[Sender] 0xe1A425f1AC34A8a441566f93c82dD730639c8510
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawBalance()
+   │  ├─[2] [Sender] 0xe1A425f1AC34A8a441566f93c82dD730639c8510.fallback()
+   │  │  └─[3] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.call(0x00000000)
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 4, objectives: 0, executions: 2, exec/sec: 0.000
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 4, objectives: 0, executions: 2, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? true 
+ Txn:
+[Sender] 0xe1A425f1AC34A8a441566f93c82dD730639c8510
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawBalance()
+   │  ├─[2] [Sender] 0xe1A425f1AC34A8a441566f93c82dD730639c8510.fallback()
+   │  │  └─[3] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawBalance{value: 8327168}()
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 5, objectives: 0, executions: 17, exec/sec: 0.000
+[32m INFO[0m ============= Coverage Summary =============
+[32m INFO[0m build/Reentrance(0x887db5715868498cff494b5dcc8eda6ce5b7652a): 60.96% Instruction Covered, 50.00% Branch Covered
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 5, objectives: 0, executions: 17, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? false 
+ Txn:
+[Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawBalance()
+   │  ├─[2] [Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb.fallback()
+   │  │  └─[3] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.addToBalance()
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 6, objectives: 0, executions: 34, exec/sec: 0.000
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 6, objectives: 0, executions: 34, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? false 
+ Txn:
+[Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb
+   └─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.addToBalance{value: 242.7622 ether}()
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 7, objectives: 0, executions: 47, exec/sec: 0.000
+[32m INFO[0m ============= Coverage Summary =============
+[32m INFO[0m build/Reentrance(0x887db5715868498cff494b5dcc8eda6ce5b7652a): 60.96% Instruction Covered, 50.00% Branch Covered
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 7, objectives: 0, executions: 47, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? false 
+ Txn:
+[Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.addToBalance{value: 242.7622 ether}()
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.addToBalance{value: 242.7622 ether}()
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawBalance()
+   │  ├─[2] [Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb.fallback()
+   │  │  └─[3] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.call(0x00000000)
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 8, objectives: 0, executions: 267, exec/sec: 0.000
+[32m INFO[0m ============= Coverage Summary =============
+[32m INFO[0m build/Reentrance(0x887db5715868498cff494b5dcc8eda6ce5b7652a): 60.96% Instruction Covered, 50.00% Branch Covered
+[32m INFO[0m [Stats #0] run time: 0h-0m-0s, clients: 1, corpus: 8, objectives: 0, executions: 267, exec/sec: 0.000
+[32m INFO[0m ============= New Corpus Item =============
+[32m INFO[0m Reverted? true 
+ Txn:
+[Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.addToBalance{value: 0.4472 ether}()
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawBalance()
+   │  ├─[2] [Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb.fallback()
+   │  │  └─[3] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawBalance()
+
+[32m INFO[0m ==========================================
+[32m INFO[0m [Testcase #0] run time: 0h-0m-0s, clients: 1, corpus: 9, objectives: 0, executions: 493, exec/sec: 0.000
+[32m INFO[0m ============= Coverage Summary =============
+[32m INFO[0m build/Reentrance(0x887db5715868498cff494b5dcc8eda6ce5b7652a): 62.28% Instruction Covered, 57.14% Branch Covered
+
+
+
+😊😊 Found vulnerabilities! 
+
+
+================ Description ================
+[Reentrancy]: Reentrancy on "build/Reentrance(0x887db5715868498cff494b5dcc8eda6ce5b7652a)" at slot 29836604556972703327658726810748771214999612883697159604690988773597119738218
+================ Trace ================
+[Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb
+   ├─[1] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.withdrawBalance()
+   │  ├─[2] [Sender] 0x35c9dfd76bf02107ff4f7128Bd69716612d31dDb.fallback()
+   │  │  │  │  └─[5] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.addToBalance{value: 16.7182 ether}()
+   │  │  └─[3] 0x887dB5715868498Cff494b5Dcc8eDA6CE5B7652a.call(0x00000000)
+
+

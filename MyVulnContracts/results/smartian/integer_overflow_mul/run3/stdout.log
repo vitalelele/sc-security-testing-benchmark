@@ -1,0 +1,84 @@
+[00:00:00:00] Fuzz target : arithmetic_errors/IntegerOverflowMul.bin
+[00:00:00:00] Fuzzing starts at 03:07:42
+[00:00:00:00] Time limit : 600 s
+[*] EVM Code Copy Analysis started.
+[*] EVM Trampoline Analysis started.
+[*] All done in 0.043608 sec.
+[DEBUG] Analyzing constructor @ 0
+Found sstore(<0x0, { }, { }>, <0x2, { }, { }>) @ 0x9
+Found codecopy(<0x0, { }, { }>, _, _), arg# = 0
+constructor: Def = { var_0 }, Use = {  }
+Constructor tainted: {  }
+[DEBUG] Analyzing count(06661abd) @ 4e
+Found sload(<0x0, { }, { }>) @ 0xa3
+count(06661abd): Def = {  }, Use = { var_0 }
+[DEBUG] Analyzing run(a444f5e9) @ 76
+Found sload(<0x0, { }, { }>) @ 0xad
+Found sstore(<0x0, { }, { }>, <T, { }, { var_0 }>) @ 0xb4
+run(a444f5e9): Def = { var_0 }, Use = { var_0 }
+(2 candidate sequences)
+["run(a444f5e9)"; "run(a444f5e9)"]
+["run(a444f5e9)"; "count(06661abd)"]
+[00:00:00:00] Start main fuzzing phase
+[00:00:00:00] [*] Save new seed id-00000_00000: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: run(a444f5e9), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: run(a444f5e9), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:00] [*] Save new seed id-00001_00000: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: run(a444f5e9), From: NormalUser3, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: count(06661abd), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:00] Tx#1 found IntegerBug at ae
+[00:00:00:00] [*] Save bug seed id-00000-IB_00000: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: run(a444f5e9), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 8000000000000000000000000000000000000000000000000032000000000000
+(    TX 2    ) Function: run(a444f5e9), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: count(06661abd), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 4    ) Function: run(a444f5e9), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 5 <= ) Function: run(a444f5e9), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 000000000000000000000000F800000000000000000000000000000000000000
+(    TX 6    ) Function: run(a444f5e9), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+

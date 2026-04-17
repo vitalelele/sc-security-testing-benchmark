@@ -1,0 +1,4 @@
+Contract: build/Reentrancy_bonus(0x887db5715868498cff494b5dcc8eda6ce5b7652a)
+Instruction Coverage: 293/293 (100.00%) 
+Branch Coverage: 13/14 (92.86%) 
+--------------------------------

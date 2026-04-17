@@ -1,0 +1,8 @@
+tool=Mythril
+docker_image=mythril/myth:latest
+category=access_control
+contract_rel=access_control/incorrect_constructor_name1.sol
+contract_name=incorrect_constructor_name1
+run=1
+timebox_sec=600
+date=2026-01-22T18:49:40+01:00
